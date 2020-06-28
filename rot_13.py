@@ -81,6 +81,7 @@ if __name__ == "__main__":
                 if option == '1':
                     continue
                 elif option == '2':
+                    print("Exiting program")
                     break
                 else:
                     print("Incorrect input.")
@@ -93,6 +94,7 @@ if __name__ == "__main__":
                 if option == '1':
                     continue
                 elif option == '2':
+                    print("Exiting program")
                     break
                 else:
                     print("Incorrect input.")
@@ -105,6 +107,7 @@ if __name__ == "__main__":
             if option == '1':
                 continue
             elif option == '2':
+                print("Exiting program")
                 break
             else:
                 print("Incorrect input.")

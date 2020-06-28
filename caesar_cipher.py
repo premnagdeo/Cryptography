@@ -65,7 +65,8 @@ if __name__ == "__main__":
             print("2. Decrypt a message")
             option = input()
             if option == '1':
-                print("The accepted list of characters are:\n", Caesar_Cipher.SYMBOLS)
+                print("The accepted list of characters are:")
+                print(Caesar_Cipher.SYMBOLS)
                 print("Enter plain text to be encrypted: ")
                 plain_text = input()
                 print("Enter a number for encryption: ")
@@ -110,6 +111,7 @@ if __name__ == "__main__":
                 if option == '1':
                     continue
                 elif option == '2':
+                    print("Exiting program")
                     break
                 else:
                     print("Incorrect input.")
@@ -122,6 +124,7 @@ if __name__ == "__main__":
                 if option == '1':
                     continue
                 elif option == '2':
+                    print("Exiting program")
                     break
                 else:
                     print("Incorrect input.")
@@ -134,6 +137,7 @@ if __name__ == "__main__":
             if option == '1':
                 continue
             elif option == '2':
+                print("Exiting program")
                 break
             else:
                 print("Incorrect input.")
