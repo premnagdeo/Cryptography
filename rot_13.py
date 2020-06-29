@@ -1,45 +1,46 @@
 import pyperclip
 
 class Rot_13:
-    SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
-    def encrypt(plain_text):
 
+    def __init__(self):
+        self.SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
+
+    def encrypt(self, plain_text):
         cipher_text = []
         for char in plain_text:
-            if char not in Rot_13.SYMBOLS:
+            if char not in self.SYMBOLS:
                 cipher_text.append(char)
                 continue
-            index = Rot_13.SYMBOLS.find(char)
+            index = self.SYMBOLS.find(char)
             new_index = index + 13
-            new_index = new_index % len(Rot_13.SYMBOLS)
-            cipher_text.append(Rot_13.SYMBOLS[new_index])
+            new_index = new_index % len(self.SYMBOLS)
+            cipher_text.append(self.SYMBOLS[new_index])
 
         return "".join(cipher_text)
 
-    def decrypt(cipher_text):
-
+    def decrypt(self, cipher_text):
         plain_text = []
         for char in cipher_text:
-            if char not in Rot_13.SYMBOLS:
+            if char not in self.SYMBOLS:
                 plain_text.append(char)
                 continue
-            index = Rot_13.SYMBOLS.find(char)
+            index = self.SYMBOLS.find(char)
             new_index = index - 13
-            new_index = new_index % len(Rot_13.SYMBOLS)
-            plain_text.append(Rot_13.SYMBOLS[new_index])
+            new_index = new_index % len(self.SYMBOLS)
+            plain_text.append(self.SYMBOLS[new_index])
 
         return "".join(plain_text)
 
 
 def ask_user():
     print("Select an option:")
-    print("1. To retry")
+    print("1. To continue")
     print("2. To exit")
     option = input()
     return option
 
 if __name__ == "__main__":
-
+    rot_13 = Rot_13()
     while True:
         try:
             print("Select an option:")
@@ -47,11 +48,11 @@ if __name__ == "__main__":
             print("2. Decrypt a message")
             option = input()
             if option == '1':
-                print("The accepted list of characters are:\n", Rot_13.SYMBOLS)
+                print("The accepted list of characters are:\n", rot_13.SYMBOLS)
                 print("Enter plain text to be encrypted: ")
                 plain_text = input()
 
-                cipher_text = Rot_13.encrypt(plain_text)
+                cipher_text = rot_13.encrypt(plain_text)
                 print("Cipher text =", cipher_text)
                 pyperclip.copy(cipher_text)
                 pyperclip.paste()
@@ -71,7 +72,7 @@ if __name__ == "__main__":
                 print("Enter cipher text to be decrypted: ")
                 cipher_text = input()
 
-                plain_text = Rot_13.decrypt(cipher_text)
+                plain_text = rot_13.decrypt(cipher_text)
                 print("Plain text =", plain_text)
                 pyperclip.copy(plain_text)
                 pyperclip.paste()
@@ -90,7 +91,7 @@ if __name__ == "__main__":
 
             else:
                 print("Incorrect input.")
-                ask_user()
+                option = ask_user()
                 if option == '1':
                     continue
                 elif option == '2':
@@ -100,7 +101,6 @@ if __name__ == "__main__":
                     print("Incorrect input.")
                     print("Exiting program")
                     break
-
 
         except Exception as e:
             option = ask_user()
