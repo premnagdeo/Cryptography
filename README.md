@@ -1,12 +1,25 @@
 # Cryptography
-A collection of cryptographic techniques written in Python3.
+A collection of cryptographic techniques implemented in Python3.
 
 
 ## Ciphers Implemented
-- Reverse Cipher
+- Affine Cipher
+- Base64 Conversion
 - Caesar Cipher
-- Rot 13 Cipher
+- Reverse Cipher
+- Rot13 Cipher
+- Substitution Cipher
 - Transposition Cipher
+- Vigenere Cipher
+
+### Brute Force Cracking Implemented:
+- Affine Cipher
+- Caesar Cipher
+- Transposition Cipher
+- Vigenere Cipher
+
+The dictionary used is available at the following link:
+https://github.com/first20hours/google-10000-english
 
 
 ## Requirements:
