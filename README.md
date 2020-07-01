@@ -1,25 +1,35 @@
 # Cryptography
+
 A collection of cryptographic techniques implemented in Python3.
 
 
 ## Ciphers Implemented
+
 - Affine Cipher
 - Base64 Conversion
 - Caesar Cipher
+- Railfence Cipher
 - Reverse Cipher
 - Rot13 Cipher
 - Substitution Cipher
 - Transposition Cipher
 - Vigenere Cipher
 
-### Brute Force Cracking Implemented:
+### Brute Force Cracking Implemented
+
 - Affine Cipher
 - Caesar Cipher
+- Railfence Cipher
 - Transposition Cipher
 - Vigenere Cipher
 
 The dictionary used is available at the following link:
 https://github.com/first20hours/google-10000-english
+
+
+### Tools
+
+- Keylogger
 
 
 ## Requirements:
@@ -29,9 +39,14 @@ https://github.com/first20hours/google-10000-english
 
 ## Dependencies:
 
-> pyperclip - https://github.com/asweigart/pyperclip
+> pyperclip - https://pypi.org/project/pyperclip/
 
 For copying plaintext/ciphertext to clipboard.
+
+
+> pynput - https://pypi.org/project/pynput/
+
+Capturing Key input for Key logger
 
 
 ## Usage
