@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
                 key = input()
                 if key == 'crack':
-                    brute_force = affine_cipher.brute_force_decrypt(cipher_text)
+                    affine_cipher.brute_force_decrypt(cipher_text)
 
                 else:
                     key = int(key)
