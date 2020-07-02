@@ -5,6 +5,7 @@ A collection of cryptographic techniques implemented in Python3.
 
 ## Ciphers Implemented
 
+### Traditional Ciphers
 - Affine Cipher
 - Base64 Conversion
 - Caesar Cipher
@@ -14,6 +15,10 @@ A collection of cryptographic techniques implemented in Python3.
 - Substitution Cipher
 - Transposition Cipher
 - Vigenere Cipher
+
+### Block Ciphers
+- Triple DES
+
 
 ### Brute Force Cracking Implemented
 
@@ -46,7 +51,17 @@ For copying plaintext/ciphertext to clipboard.
 
 > pynput - https://pypi.org/project/pynput/
 
-Capturing Key input for Key logger
+For capturing Key input for Key logger
+
+
+> pycrypto - https://pypi.org/project/pycrypto/
+
+For implementation of Block Ciphers
+
+
+All of the above dependencies can be installed using pip
+
+` pip install -r requirements.txt `
 
 
 ## Usage
