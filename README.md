@@ -59,9 +59,15 @@ For capturing Key input for Key logger
 For implementation of Block Ciphers
 
 
-All of the above dependencies can be installed using pip
+All of the above dependencies can be installed using pip:
 
 ` pip install -r requirements.txt `
+
+
+## Clone
+Clone this repo to your local machine using 
+
+` git clone https://github.com/premnagdeo/Cryptography.git `
 
 
 ## Usage
